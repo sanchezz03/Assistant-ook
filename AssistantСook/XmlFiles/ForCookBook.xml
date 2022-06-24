@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Recipes>
+  <Recipe>
+    <NameOfDish>Salad</NameOfDish>
+    <ListOfIngredients>
+      <NameOfProduct>Cucumber</NameOfProduct>
+      <AmountOfProduct>5</AmountOfProduct>
+    </ListOfIngredients>
+    <ListOfIngredients>
+      <NameOfProduct>Cabbage</NameOfProduct>
+      <AmountOfProduct>1</AmountOfProduct>
+    </ListOfIngredients>
+    <Gram>650</Gram>
+    <CalorieContentOfFood>250</CalorieContentOfFood>
+  </Recipe>
+  <Recipe>
+    <NameOfDish>FriedPotatoes</NameOfDish>
+    <ListOfIngredients>
+      <NameOfProduct>Potato</NameOfProduct>
+      <AmountOfProduct>5</AmountOfProduct>
+    </ListOfIngredients>
+    <Gram>150</Gram>
+    <CalorieContentOfFood>165</CalorieContentOfFood>
+  </Recipe>
+	<Recipe>
+		<NameOfDish>Carrot</NameOfDish>
+		<ListOfIngredients>
+			<NameOfProduct>Carrot</NameOfProduct>
+			<AmountOfProduct>3</AmountOfProduct>
+		</ListOfIngredients>
+		<Gram>150</Gram>
+		<CalorieContentOfFood>120</CalorieContentOfFood>
+	</Recipe>
+</Recipes>

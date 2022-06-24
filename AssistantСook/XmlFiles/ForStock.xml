@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Сabinets>
+	<Cabinet>
+		<ID>1</ID>
+		<NumberOfCell>
+			<Count>1</Count>
+			<AmountOfProduct>10</AmountOfProduct>
+			<NameOfProduct>Cabbage</NameOfProduct>
+		</NumberOfCell>
+		<NumberOfCell>
+			<Count>2</Count>
+			<AmountOfProduct>12</AmountOfProduct>
+			<NameOfProduct>Potato</NameOfProduct>
+		</NumberOfCell>
+	</Cabinet>
+	<Cabinet>
+		<ID>2</ID>
+		<NumberOfCell>
+			<Count>1</Count>
+			<AmountOfProduct>50</AmountOfProduct>
+			<NameOfProduct>Orange</NameOfProduct>
+		</NumberOfCell>
+	</Cabinet>
+	<Cabinet>
+		<ID>3</ID>
+		<NumberOfCell>
+			<Count>1</Count>
+			<AmountOfProduct>15</AmountOfProduct>
+			<NameOfProduct>Cucumber</NameOfProduct>
+		</NumberOfCell>
+	</Cabinet>
+</Сabinets>
