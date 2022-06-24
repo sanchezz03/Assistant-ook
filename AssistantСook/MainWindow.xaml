@@ -1,0 +1,95 @@
+﻿<Window x:Class="AssistantСook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AssistantСook"
+        xmlns:viewModel="clr-namespace:AssistantСook.MVVM.ViewModel"
+        xmlns:view="clr-namespace:AssistantСook.MVVM.View"
+        mc:Ignorable="d"
+        Title="AssistantCook" Height="600" Width="920"
+        WindowStyle="None"
+        ResizeMode = "NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    
+    <Border 
+        Background="#272537"
+        CornerRadius="10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="AssistantCook"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontSize="22"
+                       Margin="20,0,0,0"/>
+
+            <StackPanel Grid.Row="1">
+                
+                <RadioButton Content="Stock"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True"
+                             Command="{Binding StockViewCommand}"/>
+
+                <RadioButton Content="Cook Book"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding CookBookViewCommand}"/>
+
+                <RadioButton Content="Orders"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding OrdersViewCommand}"/>
+            </StackPanel>
+
+            <TextBlock Text="Page:"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontSize="28"
+                       Margin="10,0,0,0"
+                       Grid.Column="1"/>
+
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+
+            <Button Name="CloseButton" 
+                    Content="✕"
+                    Grid.Row="0" 
+                    Grid.Column="1"
+                   Click="CloseButton_Click" 
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Foreground="Gray"
+                    FontWeight="Bold"
+                    Height="20"
+                    Width="20"
+                    Margin="690,8,10,47"
+                    />
+
+        </Grid>
+    </Border>
+</Window>
