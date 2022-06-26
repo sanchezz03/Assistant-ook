@@ -47,6 +47,8 @@ namespace AssistantСook.MVVM.View
 
                 selectingName = ((TextBlock)RowColumnForName.Content).Text;
                 selectingNameOfProduct = ((TextBlock)RowColumnForNameOfProduct.Content).Text;
+                selectingName = ((TextBlock)RowColumnForName.Content).Text;
+                selectingNameOfProduct= ((TextBlock)RowColumnForNameOfProduct.Content).Text;
                 selectingAmountOfProduct = ((TextBlock)RowColumnForAmountOfProduct.Content).Text;
 
                 labelSelectID.Content = selectingName;
@@ -63,7 +65,7 @@ namespace AssistantСook.MVVM.View
                                Product = m.Element("NameOfProduct").Value,
                                Amount = m.Element("AmountOfProduct").Value,
                                Gram = c.Element("Gram").Value,
-                               Calories = c.Element("CalorieContentOfFood").Value
+                               Calories = c.Element("CalorieContentOfFood").Value  
                            };
 
             dataGridView.ItemsSource = resource;
@@ -108,6 +110,7 @@ namespace AssistantСook.MVVM.View
                                   new XElement("NameOfProduct", NameOfProduct.Text),
                         new XElement("AmountOfProduct", AmountOfProduct.Text)),
                                 new XElement("Gram", Gram.Text),
+                                new XElement("Gram",Gram.Text),
                                 new XElement("CalorieContentOfFood", CalorieContentOfFood.Text)));
                         }
                     }
@@ -142,6 +145,7 @@ namespace AssistantСook.MVVM.View
                         if (node.SelectSingleNode("NameOfDish").InnerText == selectingName && childNode.SelectSingleNode("NameOfProduct").InnerText == selectingNameOfProduct && childNode.SelectSingleNode("AmountOfProduct").InnerText == selectingAmountOfProduct && wasDeleted == false)
                         {
                             childNode.ParentNode.RemoveChild(childNode);
+                                childNode.ParentNode.RemoveChild(childNode);
                             wasDeleted = true;
                         }
                     }

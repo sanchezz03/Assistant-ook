@@ -76,6 +76,7 @@
                             Margin="10"
                             Content="{Binding CurrentView}"/>
 
+
             <Button Name="CloseButton" 
                     Content="✕"
                     Grid.Row="0" 
@@ -89,7 +90,6 @@
                     Width="20"
                     Margin="690,8,10,47"
                     />
-
         </Grid>
     </Border>
 </Window>
